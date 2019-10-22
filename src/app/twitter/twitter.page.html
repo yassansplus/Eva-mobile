@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"  >
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Twitter</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+ <h2 class="text-center">Que souhaitez-vous faire monsieur ?</h2>
+<ion-row>
+  <ion-grid>
+    <ion-button (click)="onLookingAboutSomeone()" expand="block" >
+      Rechercher
+    </ion-button>
+  </ion-grid>
+  <ion-grid>
+    <ion-button (click)="onSentimentAnalyse()" expand="block">
+      Analyse sentimentale
+    </ion-button>
+  </ion-grid>
+</ion-row>
+<form #f="ngForm" (ngSubmit)="onSubmitForm(f)" *ngIf="sentimentAnalyse || lookingAboutSomeone">
+    <ion-row>
+
+      <ion-grid>
+        <input  type="text" ngModel name="twitterUser" class="form-control">
+      </ion-grid>
+
+      <ion-grid>
+        <button class="btn btn-success" >Connexion</button>
+      </ion-grid>
+    </ion-row>
+
+</form>
+
+<ion-content>
+
+</ion-content>
