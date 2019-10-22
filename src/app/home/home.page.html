@@ -1,0 +1,30 @@
+<!--<ion-header>-->
+<!--  <ion-toolbar>-->
+<!--    <ion-title>-->
+<!--     {{getTitle()}}-->
+<!--    </ion-title>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<ion-content color="dark">
+  <div id="logo">
+    <h1><i> EVA GUI</i></h1>
+  </div>
+  <section class="stark-login">
+
+    <form #f="ngForm" (ngSubmit)="onSubmitForm(f)">
+      <div id="fade-box">
+        <input type="text" ngModel name="prenom" id="username" placeholder="Prenom" required  >
+        <input type="text" ngModel name="nom"  placeholder="Nom" required  >
+
+        <button (click)="onLogin()" >Connexion</button>
+      </div>
+    </form>
+
+  </section>
+
+
+
+
+
+</ion-content>
